@@ -1,13 +1,13 @@
 <h1 align="center">Hi 👋, I'm @purmea</h1>
 <h3 align="center">Im a full stack dev. Duo with @sofki</h3>
 
-- 🔭 I’m currently working on **a SAAS but dont know what to make**
+-  I’m currently working on **a SAAS but dont know what to make**
 
-- 🌱 I’m currently learning **C and Cpp**
+-  I’m currently learning **C and Cpp**
 
-- 👯 I’m looking to collaborate on **@sofki**
+-  I’m looking to collaborate with **@sofki**
 
-- 📫 How to reach me **shawtybae@atomicmail.io**
+-  How to reach me **shawtybae@atomicmail.io**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
