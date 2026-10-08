@@ -56,26 +56,27 @@ Always exploring new paradigms, writing clean code, and striving for engineering
 
 <div align="center">
 
-  <!-- Transparent & Sleek Dark Stats Cards -->
-  <a href="https://github.com/purmea">
-    <img src="https://github-readme-stats.vercel.app/api?username=purmea&show_icons=true&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=94a3b8&icon_color=818cf8" height="155" alt="GitHub Stats" />
-  </a>
-  <a href="https://github.com/purmea">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=purmea&layout=compact&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=94a3b8" height="155" alt="Top Languages" />
-  </a>
-
-  <br />
-
   <!-- Minimal Streak Stats -->
   <a href="https://github.com/purmea">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=purmea&hide_border=true&background=00000000&ring=a78bfa&fire=a78bfa&currStreakNum=f8fafc&sideNums=94a3b8&currStreakLabel=a78bfa&sideLabels=94a3b8&dates=64748b" height="160" alt="Streak Stats" />
   </a>
 
+  <br />
+
+  <!-- Transparent & Sleek Dark Stats Cards -->
+  <a href="https://github.com/purmea">
+    <img src="https://github-readme-stats.vercel.app/api?username=purmea&show_icons=true&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=94a3b8&icon_color=818cf8" height="155" alt="GitHub Stats" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/purmea">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=purmea&layout=compact&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=94a3b8" height="155" alt="Top Languages" />
+  </a>
+
   <br /><br />
 
-  <!-- Live Dynamic Contribution Activity Graph (Works instantly out of the box) -->
+  <!-- Minimal Random Tech Quote (Dark Theme) -->
   <a href="https://github.com/purmea">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=purmea&theme=tokyo-night&hide_border=true&area=true&bg_color=00000000&color=a78bfa&line=818cf8&point=c084fc" width="95%" alt="Activity Graph" />
+    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Daily Dev Quote" />
   </a>
 
 </div>
