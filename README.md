@@ -1,11 +1,11 @@
 <div align="center">
 
   <!-- Minimalist Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=slice&color=0:090d16,40:111827,100:1e1b4b&height=190&section=header&text=THOMAS&fontSize=52&fontColor=ffffff&fontAlignY=42&desc=Software%20Developer%20%E2%80%A2%20Building%20modern%20experiences&descSize=16&descColor=94a3b8&descAlignY=66" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=slice&color=0:090d16,40:111827,100:1e1b4b&height=190&section=header&text=MEA&fontSize=54&fontColor=ffffff&fontAlignY=42&desc=Software%20Developer%20%E2%80%A2%20Building%20modern%20experiences&descSize=16&descColor=94a3b8&descAlignY=66" width="100%" />
 
   <br />
 
-  <!-- Smooth Typing SVG -->
+  <!-- Smooth Typing SVG Animation -->
   <a href="https://github.com/purmea">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1200&color=A78BFA&center=true&vCenter=true&width=500&lines=Writing+clean%2C+maintainable+code;Turning+complex+logic+into+simple+solutions;Driven+by+curiosity+%26+continuous+learning" alt="Typing SVG" />
   </a>
@@ -36,7 +36,7 @@ I'm a developer passionate about building performant, well-architected applicati
 Always exploring new paradigms, writing clean code, and striving for engineering excellence.
 ```
 
-- 🚀 Focused on modern web technologies, automation, and backend architectures.
+- 🚀 Focused on modern technologies, automation, and backend architectures.
 - ⚡ Committed to clean code, modular design, and developer productivity.
 - 🎯 Always learning, experimenting, and refining best practices.
 
@@ -52,11 +52,11 @@ Always exploring new paradigms, writing clean code, and striving for engineering
 
 <br />
 
-### ✦ GitHub Activity
+### ✦ GitHub Activity & Analytics
 
 <div align="center">
 
-  <!-- Transparent / Sleek Dark Theme Cards -->
+  <!-- Transparent & Sleek Dark Stats Cards -->
   <a href="https://github.com/purmea">
     <img src="https://github-readme-stats.vercel.app/api?username=purmea&show_icons=true&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=94a3b8&icon_color=818cf8" height="155" alt="GitHub Stats" />
   </a>
@@ -73,8 +73,10 @@ Always exploring new paradigms, writing clean code, and striving for engineering
 
   <br /><br />
 
-  <!-- Snake Eating Contributions (Dark Version) -->
-  <img src="https://raw.githubusercontent.com/purmea/purmea/output/github-contribution-grid-snake-dark.svg" alt="Snake Contribution Graph" width="100%" />
+  <!-- Live Dynamic Contribution Activity Graph (Works instantly out of the box) -->
+  <a href="https://github.com/purmea">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=purmea&theme=tokyo-night&hide_border=true&area=true&bg_color=00000000&color=a78bfa&line=818cf8&point=c084fc" width="95%" alt="Activity Graph" />
+  </a>
 
 </div>
 
