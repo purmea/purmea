@@ -11,6 +11,25 @@ Freelance developer. I build websites and web apps from the first screen to the 
 
 <br>
 
+### Portfolio
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./.github/assets/shot-hero-dark.png">
+  <img alt="Portfolio home: I build web apps that feel clean, with an animated dot field" src="./.github/assets/shot-hero-light.png" width="100%">
+</picture>
+
+<table>
+  <tr>
+    <td width="40%"><img alt="Preferred stack section" src="./.github/assets/shot-stack.png"></td>
+    <td width="40%"><img alt="Contact section with Discord handle" src="./.github/assets/shot-contact.png"></td>
+    <td width="20%"><img alt="Portfolio on mobile, dark mode" src="./.github/assets/shot-mobile.png"></td>
+  </tr>
+</table>
+
+<sub>Built with Vite. Source in this repository.</sub>
+
+<br>
+
 ### Preferred stack
 
 <p>
