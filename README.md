@@ -26,6 +26,8 @@ Freelance developer. I build websites and web apps from the first screen to the 
   </tr>
 </table>
 
+<img alt="Clicking the Discord button copies qb_f and shows Copied" src="./.github/assets/demo-copy.gif" width="100%">
+
 <sub>Built with Vite. Source in this repository.</sub>
 
 <br>
