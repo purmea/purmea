@@ -315,13 +315,14 @@
     display: block; margin: 28px auto 0; padding: 0; border: 0; background: none; cursor: copy;
     font-family: var(--sans); font-weight: 600; letter-spacing: -0.06em; line-height: .95;
     font-size: clamp(88px, 18vw, 220px);
-    background-image: linear-gradient(90deg, var(--fg) 0%, var(--fg) 40%, var(--accent) 50%, var(--fg) 60%, var(--fg) 100%);
-    background-size: 250% 100%; background-position: 100% 0;
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    transition: background-position 1.1s var(--ease), transform .4s var(--spring);
+    color: var(--fg); transition: transform .3s var(--ease);
   }
-  .big-handle:hover { background-position: 0% 0; transform: scale(1.02); }
-  .big-handle:active { transform: scale(.98); }
+  .big-handle span {
+    display: inline-block; transition: transform .55s var(--spring), color .3s;
+    transition-delay: calc(var(--i) * 45ms);
+  }
+  .big-handle:hover span { transform: translateY(-0.12em); color: var(--accent); }
+  .big-handle:active { transform: scale(.97); }
   .contact .handle { margin-top: 28px; }
 
   @keyframes sheen { to { background-position: -200% 0; } }
@@ -477,7 +478,7 @@
 
   <section class="block contact reveal" id="contact">
     <h2 class="duo">Let’s build something<span>Message me on Discord</span></h2>
-    <button type="button" class="big-handle copy-discord" aria-label="Copy Discord handle qb_f">qb_f</button>
+    <button type="button" class="big-handle copy-discord" aria-label="Copy Discord handle qb_f"><span style="--i:0">q</span><span style="--i:1">b</span><span style="--i:2">_</span><span style="--i:3">f</span></button>
     <div class="handle">
       <span><span class="lbl">Discord&nbsp;&nbsp;</span><span class="who" id="handle">qb_f</span></span>
       <button type="button" class="pill pill-solid copy-discord copy-btn">Copy</button>
