@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>Demandes · mea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="/pages/ui.css" />
+<style>
+  .layout { display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 24px; }
+  @media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+  .list { display: grid; gap: 6px; }
+  .item { display: grid; gap: 4px; width: 100%; text-align: left; padding: 14px 16px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; transition: transform .42s var(--ease), border-color .2s; }
+  .item:active { transform: scale(.985); }
+  .item[aria-current="true"] { border-color: var(--signal); box-shadow: 0 0 0 3px var(--signal-soft); }
+  .item .l1 { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+  .item .who { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .item .what { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+  .filters button { height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-size: 13px; font-weight: 500; display: inline-flex; gap: 6px; align-items: center; }
+  .filters button[aria-pressed="true"] { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+  .filters b { font: 500 11px var(--mono); opacity: .7; }
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 28px; }
+  .stats .card { padding: 16px; } .stats .v { font: 600 30px/1 var(--display); letter-spacing: -.05em; margin-top: 10px; font-variant-numeric: tabular-nums; }
+  @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  dl.kv { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 8px 14px; margin: 0; font-size: 15px; }
+  dl.kv dt { color: var(--muted); } dl.kv dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .detail h2 { margin: 0; font: 600 30px/1.05 var(--display); letter-spacing: -.05em; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+</style>
+</head>
+<body>
+<div class="wrap wide">
+  <header class="top"><a class="brand" href="/">mea<span class="px"></span></a><span class="actions"><span class="label" id="sync"></span><button class="btn btn-sm btn-ghost" id="logout" hidden>Se déconnecter</button></span></header>
+
+  <form id="login" class="card stack" style="max-width:440px;margin:80px auto 0">
+    <h1 class="title" style="margin:0;font-size:40px">demandes<span class="px"></span></h1>
+    <div class="field"><label class="label" for="token">Jeton admin</label>
+      <input class="input mono" id="token" type="password" autocomplete="current-password" placeholder="ADMIN_TOKEN de Vercel" /></div>
+    <div id="loginErr" class="notice bad" hidden></div>
+    <button class="btn btn-primary" type="submit">Entrer</button>
+  </form>
+
+  <main id="app" hidden>
+    <div class="stats" id="stats"></div>
+    <div class="filters" id="filters"></div>
+    <div class="layout">
+      <div class="list" id="list"></div>
+      <section class="card stack detail" id="detail"><p class="muted" style="margin:0">Choisis une demande.</p></section>
+    </div>
+  </main>
+</div>
+<script type="module" src="/pages/admin.ts"></script>
+</body>
+</html>

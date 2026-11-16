@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="Tell mea what website you need and get a price within 48 hours." />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>Request a site · mea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="/pages/ui.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="brand" href="/">mea<span class="px"></span></a><a class="back" href="/">← Portfolio</a></header>
+
+  <h1 class="title">Get a site built<span class="px"></span></h1>
+  <p class="lede">Tell me what you need. <strong>I reply with a price within 48 hours.</strong> You only pay if the quote suits you, by card or crypto, and you get your site when it’s done.</p>
+  <ol class="steps">
+    <li><b>1 · DESCRIBE</b>What the site is for and what it needs.</li>
+    <li><b>2 · GET A QUOTE</b>A fixed price and a delivery time.</li>
+    <li><b>3 · PAY, GET IT</b>Card or crypto. The site lands on your page.</li>
+  </ol>
+
+  <form class="card stack" id="form" novalidate style="margin-top: 32px">
+    <div class="field" data-f="kind">
+      <span class="label">What kind of site?</span>
+      <div class="chips" id="kind" role="radiogroup" aria-label="Kind of site"></div>
+      <span class="err" hidden></span>
+    </div>
+    <div class="field" data-f="description">
+      <label class="label" for="description">Describe it <span id="count">0 / 4000</span></label>
+      <textarea class="input" id="description" name="description" maxlength="4000" placeholder="A one-page site for my barber shop: prices, opening hours, a booking button that links to my Instagram, dark and minimal."></textarea>
+      <span class="hint">What it’s for, the pages or features you need, the style you like.</span>
+      <span class="err" hidden></span>
+    </div>
+    <div class="field" data-f="links">
+      <label class="label" for="links">Sites you like <span class="muted">optional</span></label>
+      <input class="input" id="links" name="links" placeholder="https://… one or two links for inspiration" />
+    </div>
+    <div class="row2">
+      <div class="field" data-f="budget">
+        <span class="label">Budget</span>
+        <div class="chips" id="budget" role="radiogroup" aria-label="Budget"></div>
+        <span class="err" hidden></span>
+      </div>
+      <div class="field" data-f="deadline">
+        <span class="label">When?</span>
+        <div class="chips" id="deadline" role="radiogroup" aria-label="Deadline"></div>
+        <span class="err" hidden></span>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field" data-f="name">
+        <label class="label" for="name">Your name</label>
+        <input class="input" id="name" name="name" autocomplete="name" maxlength="80" />
+        <span class="err" hidden></span>
+      </div>
+      <div class="field" data-f="email">
+        <label class="label" for="email">Email</label>
+        <input class="input" id="email" name="email" type="email" autocomplete="email" maxlength="160" placeholder="you@example.com" />
+        <span class="err" hidden></span>
+      </div>
+    </div>
+    <div class="field" data-f="discord">
+      <label class="label" for="discord">Discord <span class="muted">optional</span></label>
+      <input class="input" id="discord" name="discord" maxlength="60" placeholder="your_handle" />
+    </div>
+    <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px" />
+    <div id="formError" class="notice bad" hidden></div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <button class="btn btn-primary" id="send" type="submit">Send request <span class="arrow">→</span></button>
+      <span class="hint">Free, no commitment. You get a private link to follow your request.</span>
+    </div>
+  </form>
+</div>
+<script type="module" src="/pages/request.ts"></script>
+</body>
+</html>

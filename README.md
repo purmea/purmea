@@ -60,3 +60,32 @@ Available for freelance projects: websites, landing pages and web apps.
 <br>
 
 <sub>mea · freelance developer</sub>
+
+## Website requests (`/request`, `/track`, `/admin`)
+
+Clients describe the site they want on **/request**. Each request gets a private page, **/track?t=…**, where the client sees your quote, pays by card (Stripe) or crypto, and gets the site once you deliver. You manage everything on **/admin**.
+
+**Flow:** request → you send a price and a delay → client pays (card: automatic; crypto: they paste the transaction ID and you confirm it) → you deliver a link (zip, GitHub, Drive…) → it appears on their page, only once paid.
+
+### Setup on Vercel (Project → Settings → Environment Variables)
+
+| Variable | Needed | What |
+| --- | --- | --- |
+| Upstash for Redis | **yes** | Vercel → Storage → *Upstash for Redis* → connect to this project (free). Sets `KV_REST_API_URL` and `KV_REST_API_TOKEN`. |
+| `ADMIN_TOKEN` | **yes** | Password for /admin. Generate one: `openssl rand -hex 24`. Mark it Sensitive. |
+| `SITE_URL` | yes | Your public URL, e.g. `https://mea.is-a.dev`. Used in links. |
+| `DISCORD_WEBHOOK_URL` | recommended | Ping for every new request and payment. Discord channel → Settings → Integrations → Webhooks. |
+| `STRIPE_SECRET_KEY` | for card | Restricted key (`rk_…`) with *Checkout Sessions: write*. |
+| `WALLET_BTC`, `WALLET_ETH`, `WALLET_SOL`, `WALLET_USDT` | for crypto | Your public receiving addresses. Set only the ones you accept. `WALLET_USDT_NETWORK` defaults to `Ethereum (ERC-20)`. |
+| `RESEND_API_KEY`, `MAIL_FROM` | optional | Emails the client when the request is received, quoted and delivered. |
+
+Until Upstash is connected, /request politely points visitors to Discord instead of accepting requests.
+
+### Run it locally
+
+```bash
+npm run build
+ADMIN_TOKEN=dev-token-0123456789abcdefghij npx tsx scripts/dev-server.mts
+```
+
+Then open http://localhost:4321/request (data is kept in memory).
